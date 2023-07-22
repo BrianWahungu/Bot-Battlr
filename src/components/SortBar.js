@@ -1,16 +1,13 @@
 // components/SortBar.js
 import React from 'react';
 
-function SortBar({ handleSort }) {
+function SortBar({ sortBots }) {
   return (
     <div>
-      <h2>Sort Bots</h2>
-      <div className="sort-bar">
-        {/* Add buttons to sort by health, damage, and armor */}
-        <button onClick={() => handleSort('health')}>Sort by Health</button>
-        <button onClick={() => handleSort('damage')}>Sort by Damage</button>
-        <button onClick={() => handleSort('armor')}>Sort by Armor</button>
-      </div>
+      <h3>Sort Bots By:</h3>
+      <button onClick={() => sortBots('health')}>Health</button>
+      <button onClick={() => sortBots('damage')}>Damage</button>
+      <button onClick={() => sortBots('armor')}>Armor</button>
     </div>
   );
 }
